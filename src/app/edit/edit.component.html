@@ -1,0 +1,26 @@
+<div class="main-box">
+    <h1>Edit User</h1>
+    <div class="user-box">
+        <div 
+            *ngIf="errorMessage !== null 
+            || ( name.invalid && (name.dirty || name.touched) ) 
+            || ( email.invalid && (email.dirty || email.touched) ) 
+            || ( address.invalid && (address.dirty || address.touched) )" 
+            class="error-message">
+            All fields is required
+        </div>
+        <div class="input-box">
+            <label for="name">Name</label>
+            <input type="text" name="name" [(ngModel)]="user.name" required #name="ngModel">
+        </div>
+       <div class="input-box">
+            <label for="email">Email</label>
+            <input type="email" name="email" [(ngModel)]="user.email" required #email="ngModel">
+       </div>
+       <div class="input-box">
+            <label for="address"  >Address</label>
+            <textarea name="address" cols="30" rows="10" [(ngModel)]="user.address" required #address="ngModel"></textarea>
+        </div>
+        <button class="btn" type="button" (click)="editUser()">Save User</button>
+    </div>
+</div>

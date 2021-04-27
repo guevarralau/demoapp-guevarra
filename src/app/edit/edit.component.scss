@@ -1,0 +1,64 @@
+$primary: (
+  light: #757ce8,
+  main: #3f50b5,
+  dark: #002884,
+);
+$secondary: (
+  light: #ff7961,
+  main: #f44336,
+  dark: #ba000d,
+);
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin: 10px 0;
+  }
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 10px 0;
+  input,
+  textarea {
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-width: 225px;
+    border: 1px solid map-get($primary, dark);
+    &:focus {
+      border: 1px solid map-get($primary, light);
+    }
+  }
+  label {
+    margin: 5px 0;
+    font-weight: 600;
+  }
+}
+
+.btn {
+  background-color: map-get($primary, main);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  &:hover {
+    background-color: map-get($primary, light);
+  }
+}
+
+.error-message {
+  padding: 10px 30px;
+  text-align: center;
+  background-color: #e53935;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  &:hover {
+    background-color: #ef5350;
+  }
+}

@@ -1,0 +1,87 @@
+$primary: (
+  light: #757ce8,
+  main: #3f50b5,
+  dark: #002884,
+);
+$secondary: (
+  light: #bdbdbd,
+  main: #757575,
+  dark: #424242,
+);
+
+.list {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+  min-height: 200px;
+  width: 50vw;
+  margin: 100px auto;
+  background: white;
+  border-radius: 5px;
+
+  padding: 5px 25px;
+  border-left: solid 5px map-get($secondary, main);
+  min-width: 220px;
+  margin: 10px 20px;
+  max-width: 250px;
+  h3 {
+    font-weight: 900;
+    margin: 5px 0 0 0;
+    word-wrap: break-word;
+  }
+  .email-container {
+    font-weight: 900;
+    margin: 5px 0 0 0;
+    word-wrap: break-word;
+    font-size: 15px;
+  }
+  .address-container {
+    font-weight: 900;
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    word-wrap: break-word;
+    span {
+      font-size: 13px;
+    }
+  }
+  span {
+    font-weight: 600;
+    font-style: italic;
+    word-wrap: break-word;
+    font-size: 15px;
+  }
+  &:hover {
+    border-left: solid 5px map-get($primary, dark);
+  }
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button {
+      margin: 0;
+      margin-top: 5px;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      background-color: map-get($primary, main);
+      color: #fff;
+    }
+    .edit {
+      background-color: map-get($primary, main);
+      &:hover {
+        background-color: map-get($primary, light);
+        cursor: pointer;
+      }
+    }
+    .delete {
+      background-color: #b22222;
+      &:hover {
+        background-color: #dc143c;
+        cursor: pointer;
+      }
+    }
+  }
+}

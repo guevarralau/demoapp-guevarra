@@ -1,0 +1,14 @@
+<div class="list">
+    <h3>Full Name: {{user.name}}</h3>
+    <div class="email-container">
+        Email:<span><@{{user.email}}></span>
+    </div>
+
+    <div class="address-container">
+        Address: <span>{{truncate(user.address, 40)}}</span>
+    </div>
+    <div class="bottom-section">
+        <button class="edit" type="button" (click)="editUser()">Edit</button>
+        <button class="delete" type="button" (click)="deleteUser()">Delete</button>
+    </div>
+</div>

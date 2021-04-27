@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+$primary: (
+  light: #757ce8,
+  main: #3f50b5,
+  dark: #002884,
+);
+$secondary: (
+  light: #ff7961,
+  main: #f44336,
+  dark: #ba000d,
+);
+
+body {
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header {
+  background: map-get($primary, main);
+  padding: 1em 2em;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a.logo {
+    font-weight: bold;
+    font-size: 20px;
+    &:hover {
+      color: map-get($secondary, main);
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      justify-items: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+      li {
+        margin: 0 10px;
+      }
+      li a {
+        &:hover {
+          color: map-get($secondary, light);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 1em 0;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  nav {
+    ul {
+      flex-direction: column;
+      li {
+        margin: 10px !important;
+      }
+    }
+  }
+}

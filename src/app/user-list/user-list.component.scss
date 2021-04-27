@@ -1,0 +1,16 @@
+.user-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.no-users-message {
+  padding: 10px 55px;
+  font-size: 30px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  h1 {
+    text-align: center;
+  }
+}
