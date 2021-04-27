@@ -28,9 +28,9 @@ export class EditComponent implements OnInit {
     const now : Date = new Date();
     const data =  { usr_fullname: this.user.name, usr_email: this.user.email, usr_address: this.user.address, updated_at: now.toISOString()}
     console.log(data)
-    this.http.post<any>(url('users'), data).subscribe({
+    this.http.put<any>(url(`users/${this.user.id}`), data).subscribe({
       next: data => {
-          console.log('successfully created')
+          console.log('successfully Updated')
           this.router.navigateByUrl('list')
       },
       error: error => {
